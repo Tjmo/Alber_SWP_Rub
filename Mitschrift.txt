@@ -1,0 +1,19 @@
+2 Arten von Datenstrukturen:
+Liste
+langsamer als array, verkettete Listen, kann man neue elemente/objekte hinzufügen, in objekten stehen value (string value z.b.), es steht ein zweites elemente (next, symbol, zeiger,-die aufs nächste element zeigen)
+wird durchgelooped
+(einzelne objekte iwo im speicher verteilt und hängen über zeiger zusammen)
+
+oder
+
+Array
+im speicher gibts eine Startstelle und die Elemente zum Array sind hintereinander, das betriebssystem definiert des mit anfangsaddresse, typen, (die zahlen hängen alle zusammen hintereinander), array ist schneller als eine Liste
+java kann alles in einem rutsch durchlesen, zum array kann man keine neuen elemente hinzufügen
+
+
+
+
+Namespaces
+sind nur die Sichtbarkeiten, in Methode haben wir lokale variable -> namespace (leveling)
+
+dictionary ist unsortiert

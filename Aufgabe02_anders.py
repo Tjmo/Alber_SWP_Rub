@@ -21,6 +21,7 @@ def statistik(start, end, anz):
 def statistik_2(start, end, anz):
     mdic = {}
     for i in range(end):
+        
         mdic[i] = 0
 
 

@@ -17,3 +17,46 @@ Namespaces
 sind nur die Sichtbarkeiten, in Methode haben wir lokale variable -> namespace (leveling)
 
 dictionary ist unsortiert
+
+------------------------------------------------------------ neue Stunde
+
+Lambda funktion ist kürzere Weise eine Methode zu schreiben und eine "anonyme Methode" da sie keinen Methodennamen braucht/hat
+
+Instanz: Objekt (In einer Klasse macht man mit new eine Instanz (Kopie einer Klasse mit individueller Werte))
+Referenz: Ist ein Verweis auf ein Objekt (Zeiger: Rubner zeigt auf Glatzl (link))
+Identität: Fingerabdruck eines Objektes
+
+||||||||||||||||||||||||||||||||||||||| python code
+a=6
+b=5
+a / b
+zahl = 8 #instanz obwohl integer
+id(zahl) #identität der Zahl
+zahl1 = 8
+id(zahl1) #id der speicherstelle in der der 8ter liegt
+mlist = [0,1,'hallo']
+id(mlist)
+mlist2 = [0,1,'hallo']
+id(mlist2) #id(mlist) != id(list)
+
+l1=[1,2]
+l2=l1
+l1.append(3)
+#wir sehen, dass sowohl l1 als auch l2 mit 3 erweitert wurden (da l2 auf l1 verweist)
+|||||||||||||||||||||||||||||||||||||||
+
+String ist Inmutable
+Alle sachen mit new, listen, ... sind Mutable
+a=6
+b=a -Referenz
+
+Veränderlich ~~ Mutable - List, Bytearray
+Unveränderlich ~~ Inmutable - tuple, str, bytes
+
+Rheinwerk Seite durchlesen
+.append fügt etwas hinzu (z.B. an Liste)
+
+#man muss global for mutable datentypen schreiben !!!HÜ!!!
+KW41 hü Pokersimulator
+Modulierung, Methode wo man 5 Objekte rausbekommt, array mit 52 stellen und immer über modolo farbe finden und über division farbe finden, 0-12 (13) 26%13(0,1,2,3(Farbe)) 26/13(Zahl)
+------------------------------------------------------------ neue Stunde

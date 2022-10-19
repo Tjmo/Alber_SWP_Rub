@@ -115,7 +115,7 @@ def ermitteln(hand, tisch):
 
 #höchste hand -------------------------------------------------------------------
 
- # check for straight flush
+ # checkt für straight flush
     if is_straight:
         if is_flush:
             return "Straight Flush!"
@@ -126,9 +126,9 @@ def ermitteln(hand, tisch):
             return f"Full house {gesichter_karten.get(sortierte_zahlen[0][0]) if sortierte_zahlen[0][0] in gesichter_karten else sortierte_zahlen[0][0]}s over {gesichter_karten.get(sortierte_zahlen[1][0]) if sortierte_zahlen[1][0] in gesichter_karten else sortierte_zahlen[1][0]}s!"
     if is_flush:
         return f"Flush in {gesichter_karten.get(sortierte_zahlen[0][0]) if sortierte_zahlen[0][0] in gesichter_karten else sortierte_zahlen[0][0]}!"
-    if is_straight:
+    if is_straße:
         return f"Straße! {run}"
-    # check for groups
+    # checkt für Gruppen
        
     if sortierte_zahlen[0][1] == 3:
         return f"Triple {gesichter_karten.get(sortierte_zahlen[0][0]) if sortierte_zahlen[0][0] in gesichter_karten else sortierte_zahlen[0][0]}s!"
@@ -165,10 +165,10 @@ def ermitteln(hand, tisch):
     sortierte_zahlen = sorted(zahlen.items(), key=lambda item:(item[1], item[0]), reverse=True)
     sortierte_farben = sorted(farben.items(), key=lambda item:(item[1], item[0]), reverse=True)
  
-    # checkt ob werts ein straight enthält
+    # checkt ob werts eine straße enthält
     run = [sorted(list(werts))[0]]
     lastval = sorted(list(werts))[0]
-    is_straight = False
+    is_straße = False
     for val in sorted(list(werts)):
         if val - lastval == 1:
             run.append(val)
@@ -176,7 +176,7 @@ def ermitteln(hand, tisch):
             run = [val]
         lastval = val
         if len(run) == 5:
-            is_straight = True
+            is_straße = True
             break
    
     # checkt ob sortierte_farben ein flush enthält
@@ -184,17 +184,17 @@ def ermitteln(hand, tisch):
     if sortierte_farben[0][1] == 5:
         is_flush = True
     # checkt ob straight flush
-    if is_straight:
+    if is_straße:
         if is_flush:
             return "Straight Flush!"
     if sortierte_zahlen[0][1] == 4: #checkt ob viererpaarl
         return f"Quad {gesichter_karten.get(sortierte_zahlen[0][0]) if sortierte_zahlen[0][0] in gesichter_karten else sortierte_zahlen[0][0]}s!"
-    if sortierte_zahlen[0][1] == 3:
-        if sortierte_zahlen[1][1] == 2:#checkt ob 3er und 2er paar da ist (full house)
+    if sortierte_zahlen[0][1] == 3: #checkt ob 3er und 2er paar da ist (full house)
+        if sortierte_zahlen[1][1] == 2:
             return f"Full house {gesichter_karten.get(sortierte_zahlen[0][0]) if sortierte_zahlen[0][0] in gesichter_karten else sortierte_zahlen[0][0]}s over {gesichter_karten.get(sortierte_zahlen[1][0]) if sortierte_zahlen[1][0] in gesichter_karten else sortierte_zahlen[1][0]}s!"
     if is_flush:
         return f"Flush in {gesichter_karten.get(sortierte_zahlen[0][0]) if sortierte_zahlen[0][0] in gesichter_karten else sortierte_zahlen[0][0]}!"
-    if is_straight:
+    if is_straße:
         return f"Straße! {run}"
     # check for groups
        

@@ -60,3 +60,63 @@ Rheinwerk Seite durchlesen
 KW41 hü Pokersimulator
 Modulierung, Methode wo man 5 Objekte rausbekommt, array mit 52 stellen und immer über modolo farbe finden und über division farbe finden, 0-12 (13) 26%13(0,1,2,3(Farbe)) 26/13(Zahl)
 ------------------------------------------------------------ neue Stunde
+Programm zu Maschinen Code (00101010)
+
+Sprachen wie Python, Java, C#, erzeugen Bytecode (kein Maschinencode) .class Dateien -> lesbare Textpassagen und Hieroglyphen (Maschinencode-Teile) enthalten
+
+Vorteile:
+Maschinencode Ist am schnellsten(effektivsten) auf dieser einen Hardware
+Interpretencode wird geschrieben & compiliert, wir können diese .class datei nehmen und auf jedem System dass ein Javainterpreten hat geben und benutzen (Plattformunabhängig wo Java (od.a.) installiert ist), einmal neu Compilieren und es funktioniert
+
+Nachteile:
+Maschinen-Code funktioniert auf anderen Versionen/PC's nicht raspbpie Versionen, 32-bit versionen, dort 
+Interpretensprachen: Verwaltet vieles selber (Speicher z.B.) wird durch Garbage-Collector verwendet aber eben nicht auf 100% effektiv auf dieser Hardware (-> etwas langsam), Python verwendet viel C code weshalb es trotzdem schnell ist da es native c code verwendet,
+
+In welcher Programmiersprache sind Java, C#, Python programmiert?
+in C und C ist in Assambler programmiert welcher zwar eine Programmiersprache ist aber hauptsächlich binär-code (sehr hardware nah spezifische Befehle)
+{[(steht alles in der Powerpoint unter den Links)]}
+
+__Seiteneffekte:__
+_Mutable_
+Objekte die verändert werden Können, Listen, Dictionaries
+a=5 b=a // a=5 b=5 -> Id bleibt gleich da Python 5 im Speicher immer gleich speichert (keine neue Instanz)
+_Immutable_
+primitive Datentypen z.B. x=3 -> Instanz (es ganze), Referenz zeigt drauf, Objekt hat eindeutige Id
+
+In-Place
+nehmen wir an wir haben ein Array (bzw. Datenstruktur) und wir wollen diese Datenstruktur sortieren, z.B. wir schauen ein Objekt durch und alle Objekte wo ist das Minimum -> wird nach vorne getauscht und es geht weiter (kleinsten Zahlen blubbern nach vorne)
+Wir sortieren im Array im Zusatzspeicher -> In-Place
+Ist wenn wir nur konstanten Zusatzspeicher benötigen aber nicht von der Anzahl abhängigen speicher
+Python oder Java bibliotheken machen abhängige Operationen, z.B. Liste sorted, list2=sorted.list1 (nicht in-place)
+Ob ein Verfahren in Datenstrukturen ohne zusätzlichen Speicher
+
+bei der deepcopy mach ich alles in einer neuen Liste
+
+Wenn ich eine Liste habe und in dieser Liste sind nur mehr Imutable objekte drinnen und wir wollen eine copy machen dann funktioniert die deepcopy
+
+Aber wenn ich in einer liste wieder eine liste habe dann ist meine deepcopy keine echte deepcopy sondern nur eine Referenz
+{[(Alles durchlesen und fragen in Powerpoint)]}
+
+Style-Guides
+sind wichtige Guides damit die Syntax leserlich ist und schön formatiert bleibt
+
+File Encoding 
+basically Ascii code für die Zeichen bzw Tasten
+-> wenn in China programmiere und in Österreich den Code abgebe dann wird es wegen den Verschiedenen Werten des codes nicht erkannt -> muss also alles angepasst werden
+
+{[(DelftStack -> Code)]}
+{[(Rheinwerk-Verlag -> Eingebaute Funktionen)]}
+
+Dunder Variablen
+sind in Main bzw Einstiegspunkt
+||||||||||||||||||||||||||||||||||||
+if __name__ == "__main__":
+    meine_function()
+||||||||||||||||||||||||||||||||||||
+Dunder = Doubleunderscore
+wird von Python standardmäßig befüllt
+ist Zeichen, dass eine besondere Variable ist
+in jeder der 3 Pythondatei könnte ich if name == könnte dann aber nur dann ausgeführt werden in der Datei in der ich die Dunder benutzt habe
+In test1 führe ich der Methoden in der Main aus
+
+------------------------------------------------------------ neue Stunde

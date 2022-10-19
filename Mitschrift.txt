@@ -37,7 +37,7 @@ id(zahl1) #id der speicherstelle in der der 8ter liegt
 mlist = [0,1,'hallo']
 id(mlist)
 mlist2 = [0,1,'hallo']
-id(mlist2) #id(mlist) != id(list)
+id(mlist2) #id(mlist) != id(mlist2)
 
 l1=[1,2]
 l2=l1

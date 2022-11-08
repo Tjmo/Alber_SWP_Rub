@@ -212,6 +212,29 @@ def ermitteln(hand, tisch):
 def festlegen(hand, tisch):#gibt aus, was die beste Kombination aus deiner Hand und dem was auf dem Tisch liegt wäre
     print(f"Deine beste Kombination wäre: {ermitteln(hand, tisch)}")
  
+
+
+
+
+#def statistics(hand, tisch):
+#
+#    fullhousezaehler = 0
+#    
+#    zahlen = {} #für Paare und Dreier
+#    farben = {} #---||---
+#    werts = set()
+#
+#    sortierte_zahlen = sorted(zahlen.items(), key=lambda item:(item[1], item[0]), reverse=True)
+#    sortierte_farben = sorted(farben.items(), key=lambda item:(item[1], item[0]), reverse=True)
+#
+#    for x in range(1000):
+#        #festlegen(deine_hand, tisch)
+#        ermitteln(hand, tisch)
+#        if sortierte_zahlen[0][1] == 3:
+#            if sortierte_zahlen[1][1] == 2:
+#                fullhousezaehler+1
+
+
+#statistics(deine_hand, tisch)
 festlegen(deine_hand, tisch)
-
-
+        

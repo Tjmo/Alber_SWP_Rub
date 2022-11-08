@@ -73,7 +73,7 @@ def ermitteln(hand, tisch):
     # zählt werte und farbe
     zahlen = {} #für Paare und Dreier
     farben = {} #---||---
-    werts = set() #straight oder nicht
+    werts = set() #straße oder nicht
     # geht alle Karten durch
     for karte in total_hand:
         if karte.wert in gesichter_karten:
@@ -95,10 +95,10 @@ def ermitteln(hand, tisch):
     sortierte_zahlen = sorted(zahlen.items(), key=lambda item:(item[1], item[0]), reverse=True)
     sortierte_farben = sorted(farben.items(), key=lambda item:(item[1], item[0]), reverse=True)
  
-    # checkt ob werts ein straight beinhaltet
+    # checkt ob werts ein straße beinhaltet
     run = [sorted(list(werts))[0]]
     lastval = sorted(list(werts))[0]
-    is_straight = False
+    is_straße = False
     for val in sorted(list(werts)):
         if val - lastval == 1:
             run.append(val)
@@ -106,7 +106,7 @@ def ermitteln(hand, tisch):
             run = [val]
         lastval = val
         if len(run) == 5:
-            is_straight = True
+            is_straße = True
             break
     # checkt ob sortierte_farben ein flush beinhaltet
     is_flush = False
@@ -116,7 +116,7 @@ def ermitteln(hand, tisch):
 #höchste hand -------------------------------------------------------------------
 
  # checkt für straight flush
-    if is_straight:
+    if is_straße:
         if is_flush:
             return "Straight Flush!"
     if sortierte_zahlen[0][1] == 4: #zahlen 4 gleich (durch zähler) dann quad

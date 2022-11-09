@@ -68,78 +68,7 @@ tisch.append(tisch_ausgeben()) #die 4. und 5. Karten wird nun aufgedeckt
 print(f"Alle Karten aufgedeckt: {[(karte.wert, karte.farbe) for karte in tisch]}")
 
 #nimmt meine karten und die auf dem Tisch, um herauszufinden welche kombination die höchste wäre
-def ermitteln(hand, tisch):
-    total_hand = hand + tisch #alle 7 Karten
-    # zählt werte und farbe
-    zahlen = {} #für Paare und Dreier
-    farben = {} #---||---
-    werts = set() #straße oder nicht
-    # geht alle Karten durch
-    for karte in total_hand:
-        if karte.wert in gesichter_karten:
-            karten_wert = gesichter_karten[karte.wert] #wenn karte höher 10 dann soll sie ihren wert erhalten
-        else:
-            karten_wert = karte.wert #sonst bleibt alles gleich
-        werts.add(karten_wert)
-        if karten_wert in zahlen:
-            zahlen[karten_wert] += 1
-        else:
-            zahlen[karten_wert] = 1
-        if karte.farbe in farben:
-            farben[karte.farbe] += 1
-        else:
-            farben[karte.farbe] = 1
-
-# was hab ich in der hand ------------------------------------------------------
-  # sortiert zahlen und farben
-    sortierte_zahlen = sorted(zahlen.items(), key=lambda item:(item[1], item[0]), reverse=True)
-    sortierte_farben = sorted(farben.items(), key=lambda item:(item[1], item[0]), reverse=True)
- 
-    # checkt ob werts ein straße beinhaltet
-    run = [sorted(list(werts))[0]]
-    lastval = sorted(list(werts))[0]
-    is_straße = False
-    for val in sorted(list(werts)):
-        if val - lastval == 1:
-            run.append(val)
-        else:
-            run = [val]
-        lastval = val
-        if len(run) == 5:
-            is_straße = True
-            break
-    # checkt ob sortierte_farben ein flush beinhaltet
-    is_flush = False
-    if sortierte_farben[0][1] == 5:
-        is_flush = True
-
-#höchste hand -------------------------------------------------------------------
-
- # checkt für straight flush
-    if is_straße:
-        if is_flush:
-            return "Straight Flush!"
-    if sortierte_zahlen[0][1] == 4: #zahlen 4 gleich (durch zähler) dann quad
-        return f"Quad {gesichter_karten.get(sortierte_zahlen[0][0]) if sortierte_zahlen[0][0] in gesichter_karten else sortierte_zahlen[0][0]}s!"
-    if sortierte_zahlen[0][1] == 3: #zahlen 3 gleich und 2 gleich full house
-        if sortierte_zahlen[1][1] == 2:
-            return f"Full house {gesichter_karten.get(sortierte_zahlen[0][0]) if sortierte_zahlen[0][0] in gesichter_karten else sortierte_zahlen[0][0]}s over {gesichter_karten.get(sortierte_zahlen[1][0]) if sortierte_zahlen[1][0] in gesichter_karten else sortierte_zahlen[1][0]}s!"
-    if is_flush:
-        return f"Flush in {gesichter_karten.get(sortierte_zahlen[0][0]) if sortierte_zahlen[0][0] in gesichter_karten else sortierte_zahlen[0][0]}!"
-    if is_straße:
-        return f"Straße! {run}"
-    # checkt für Gruppen
-       
-    if sortierte_zahlen[0][1] == 3:
-        return f"Triple {gesichter_karten.get(sortierte_zahlen[0][0]) if sortierte_zahlen[0][0] in gesichter_karten else sortierte_zahlen[0][0]}s!"
-    if sortierte_zahlen[0][1] == 2:
-        if sortierte_zahlen[1][1] == 2:
-            return f"Zwei Paare {gesichter_karten.get(sortierte_zahlen[0][0]) if sortierte_zahlen[0][0] in gesichter_karten else sortierte_zahlen[0][0]} and {gesichter_karten.get(sortierte_zahlen[1][0]) if sortierte_zahlen[1][0] in gesichter_karten else sortierte_zahlen[1][0]}!"
-        else:
-            return f"Paare mit {gesichter_karten.get(sortierte_zahlen[0][0]) if sortierte_zahlen[0][0] in gesichter_karten else sortierte_zahlen[0][0]}!"
-    if sortierte_zahlen[0][1] == 1:
-        return f"Hohe Karte {gesichter_karten.get(sortierte_zahlen[0][0]) if sortierte_zahlen[0][0] in gesichter_karten else sortierte_zahlen[0][0]}!"
-
+#hier herhor
 def ermitteln(hand, tisch):
     total_hand = hand + tisch
     # zählt werte und farbe

@@ -45,7 +45,7 @@ def ausgeben(karten = karten):
     karte2, karten = karte_ausgeben(karten) #Zweite Karte wird aus dem Deck ausgegeben
     deine_hand = [karte1, karte2] #mein Deck aus diesen 2 Karten
     return deine_hand
- 
+
 
 deine_hand = ausgeben()
 print([(karte.wert, karte.farbe) for karte in deine_hand]) #die Werte und Farben der Karten in meiner Hand werden ausgegeben
@@ -81,6 +81,15 @@ def ermitteln(hand, tisch):
     zahlen = {}
     farben = {}
     werts = set()
+    a = 1
+    b = 2
+    c = 3
+    d = 4
+    e = 5
+    f = 6
+    g = 7
+    h = 8
+    i = 9
     # schleife durch alle karten
     for karte in total_hand:
         if karte.wert in gesichter_karten:
@@ -121,27 +130,27 @@ def ermitteln(hand, tisch):
     # checkt ob straight flush
     if is_straße:
         if is_flush:
-            return "Straight Flush!"
+            return i
     if sortierte_zahlen[0][1] == 4: #checkt ob viererpaarl
-        return f"Quad {gesichter_karten.get(sortierte_zahlen[0][0]) if sortierte_zahlen[0][0] in gesichter_karten else sortierte_zahlen[0][0]}s!"
+        return h
     if sortierte_zahlen[0][1] == 3: #checkt ob 3er und 2er paar da ist (full house)
         if sortierte_zahlen[1][1] == 2:
-            return f"Full house {gesichter_karten.get(sortierte_zahlen[0][0]) if sortierte_zahlen[0][0] in gesichter_karten else sortierte_zahlen[0][0]}s over {gesichter_karten.get(sortierte_zahlen[1][0]) if sortierte_zahlen[1][0] in gesichter_karten else sortierte_zahlen[1][0]}s!"
+            return g
     if is_flush:
-        return f"Flush in {gesichter_karten.get(sortierte_zahlen[0][0]) if sortierte_zahlen[0][0] in gesichter_karten else sortierte_zahlen[0][0]}!"
+        return f
     if is_straße:
-        return f"Straße! {run}"
+        return e
     # check for groups
        
     if sortierte_zahlen[0][1] == 3:
-        return f"Triple {gesichter_karten.get(sortierte_zahlen[0][0]) if sortierte_zahlen[0][0] in gesichter_karten else sortierte_zahlen[0][0]}s!"
+        return d
     if sortierte_zahlen[0][1] == 2:
         if sortierte_zahlen[1][1] == 2:
-            return f"Zwei Paare {gesichter_karten.get(sortierte_zahlen[0][0]) if sortierte_zahlen[0][0] in gesichter_karten else sortierte_zahlen[0][0]} and {gesichter_karten.get(sortierte_zahlen[1][0]) if sortierte_zahlen[1][0] in gesichter_karten else sortierte_zahlen[1][0]}!"
+            return c
         else:
-            return f"Paar mit {gesichter_karten.get(sortierte_zahlen[0][0]) if sortierte_zahlen[0][0] in gesichter_karten else sortierte_zahlen[0][0]}!"
+            return b
     if sortierte_zahlen[0][1] == 1:
-        return f"Hohe Karte {gesichter_karten.get(sortierte_zahlen[0][0]) if sortierte_zahlen[0][0] in gesichter_karten else sortierte_zahlen[0][0]}!"
+        return a
 
 
 def festlegen(hand, tisch):#gibt aus, was die beste Kombination aus deiner Hand und dem was auf dem Tisch liegt wäre
@@ -150,7 +159,6 @@ def festlegen(hand, tisch):#gibt aus, was die beste Kombination aus deiner Hand 
 '''
 def statistics(counter):
 
-    royalflushzaehler = 0
     straightflushzaehler = 0
     quadzaehler = 0
     fullhousezaehler = 0
@@ -171,7 +179,6 @@ def statistics(counter):
             flushzaehler+1
             is_flush = True
 
-    print(f"{royalflushzaehler}")
     print(f"{straightflushzaehler}")
     print(f"{quadzaehler}")
     print(f"{fullhousezaehler}")
@@ -183,5 +190,5 @@ def statistics(counter):
 
 statistics(10)
 '''
-festlegen(deine_hand, tisch)
-        
+
+ermitteln(deine_hand, tisch)

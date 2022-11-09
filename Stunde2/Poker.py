@@ -68,13 +68,6 @@ tisch.append(tisch_ausgeben()) #die 4. und 5. Karten wird nun aufgedeckt
 print(f"Alle Karten aufgedeckt: {[(karte.wert, karte.farbe) for karte in tisch]}")
 
 #nimmt meine karten und die auf dem Tisch, um herauszufinden welche kombination die höchste wäre
-
-
-#löschdazwischen
-
-#löschdazwischen
-
-
 def ermitteln(hand, tisch):
     total_hand = hand + tisch
     # zählt werte und farbe
@@ -144,9 +137,9 @@ def ermitteln(hand, tisch):
         return f"Hohe Karte {gesichter_karten.get(sortierte_zahlen[0][0]) if sortierte_zahlen[0][0] in gesichter_karten else sortierte_zahlen[0][0]}!"
 
 
-def festlegen(hand, tisch):#gibt aus, was die beste Kombination aus deiner Hand und dem was auf dem Tisch liegt wäre
+def main_festlegen(hand, tisch):#gibt aus, was die beste Kombination aus deiner Hand und dem was auf dem Tisch liegt wäre
     print(f"Deine beste Kombination wäre: {ermitteln(hand, tisch)}")
 
-
-festlegen(deine_hand, tisch)
+if __name__ == "__main__":
+    main_festlegen(deine_hand, tisch)
         

@@ -120,3 +120,17 @@ in jeder der 3 Pythondatei könnte ich if name == könnte dann aber nur dann aus
 In test1 führe ich der Methoden in der Main aus
 
 ------------------------------------------------------------ neue Stunde
+
+Es gibt wenn alles passt (aber auch nur passt), dann bekommt man einen Dreier
+Man muss viele Extras einbauen, damit man in die Richtung eines Einsers kommt.
+
+Von Int Float Double
+Int hernehmen, da des Ganzzahlen sind und weniger Rechenleistung benötigen
+
+Mainmethoden machen weil grundlegende funktionen importieren
+
+immer in methoden einpacken zum importieren
+::-1 dreht um
+
+
+------------------------------------------------------------ neue Stunde

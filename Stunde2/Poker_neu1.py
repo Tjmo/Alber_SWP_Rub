@@ -147,6 +147,41 @@ def ermitteln(hand, tisch):
 def festlegen(hand, tisch):#gibt aus, was die beste Kombination aus deiner Hand und dem was auf dem Tisch liegt wäre
     print(f"Deine beste Kombination wäre: {ermitteln(hand, tisch)}")
 
+'''
+def statistics(counter):
 
+    royalflushzaehler = 0
+    straightflushzaehler = 0
+    quadzaehler = 0
+    fullhousezaehler = 0
+    flushzaehler = 0
+    straßezaehler = 0
+    triplezaehler = 0
+    pairzaehler = 0
+    highcardzaehler = 0
+    
+
+    for x in range(counter):
+        ermitteln(hand, tisch)
+        if sortierte_zahlen[0][1] == 3:
+            if sortierte_zahlen[1][1] == 2:
+                fullhousezaehler+1
+        is_flush = False
+        if sortierte_farben[0][1] == 5:
+            flushzaehler+1
+            is_flush = True
+
+    print(f"{royalflushzaehler}")
+    print(f"{straightflushzaehler}")
+    print(f"{quadzaehler}")
+    print(f"{fullhousezaehler}")
+    print(f"{flushzaehler}")
+    print(f"{straßezaehler}")
+    print(f"{triplezaehler}")
+    print(f"{pairzaehler}")
+    print(f"{highcardzaehler}")
+
+statistics(10)
+'''
 festlegen(deine_hand, tisch)
         

@@ -132,5 +132,18 @@ Mainmethoden machen weil grundlegende funktionen importieren
 immer in methoden einpacken zum importieren
 ::-1 dreht um
 
+---Debuggen:---
+Debuggen Schritt für Schritt
+
+https://realpython.com/python-debugging-pdb/#essential-pdb-commands
+
+ternäre operatoren sind if ähnlich
+-------------------
+min = a < b and a or b
+print(min)
+
+a = 5
+rval = True if a > 5 else False
+-------------------
 
 ------------------------------------------------------------ neue Stunde

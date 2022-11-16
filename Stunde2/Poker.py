@@ -1,11 +1,11 @@
 import numpy as np
 import random
 
-global karten
-karten = []
+global __karten
+__karten = []
 
 for i in range(52): # 52 Ziffern da 13Karten * 4Farben | danach befüllen wir Liste karten mit den zahlen
-    karten.append(i)
+    __karten.append(i)
 
 
 def zahlen(random_karten): #werteliste, wir nehmen 5 karten und befüllen diese mit den zugehörigen werten (1-13% gibt max 13)
@@ -25,7 +25,7 @@ def farbe(zufaelligekarte): #farbliste, wir nehmen 5 karten und befüllen diese 
 def zufallfuenf(): # fünf zufällige karten werden ausgegeben
     zaehler=0
     zufuenf=[]
-    randomKarten =karten
+    randomKarten =__karten
     random.shuffle(randomKarten)
     while zaehler < 5 :
         zufuenf.append(randomKarten[zaehler])

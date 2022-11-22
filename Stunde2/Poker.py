@@ -108,8 +108,10 @@ for i in range(0,100000): #wir führen es 100000 mal aus und jedesmal wenn eine 
     elif(paar(randomKarte)):
         dic["paar"] = dic["paar"]+1
 
-
-if __name__ == "__main__":
+def main():
     for i in dic:
         dic[i]= round(dic[i]/100000*100,3)
     print(dic)
+    
+if __name__ == "__main__":
+    main()

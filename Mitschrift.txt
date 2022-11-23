@@ -292,4 +292,6 @@ geht ordnermäßig vor
 ist an unsere hardware gekoppelt, sobald wir an unserem neuen rechner sind müssen wir es erneut aufbauen
 
 
+wir haben projekt, dann hab ich gitinit, dann gitignore python c*jpg oder so kein plan, pipreqs installieren (oder freeze)
+
 ------------------------------------------------------------ neue Stunde

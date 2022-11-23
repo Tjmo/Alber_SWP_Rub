@@ -262,7 +262,34 @@ Wir könnten noch eine separate methode machen oder vererbung
 Wir haben mehrere Konstruktoren
 
 
+Counter für wie oft der Mensch was spielt und des soll der pc nehmen und er soll random
+und das auf verschiedenen schwierigkeitsstufen
+wie speichere ich daten? Txt datei oder sqlight datenbank
+Daten gezählt, flask api im hintergrund der eine db hat und an den wir daten schicken -> 2 separate programme
 
+
+Wir wollen eine Programmierumgebung die exakt so abgestimmt ist dass unser programm funktioniert
+Bibliotheken können sehr sehr viel aber sie verändern sich laufend
+
+Python rohinstallation erweitert man in einem Ordner auf unserer Festplatte, welche nur in einem Bestimmten Ordner sind
+
+Python beim normalen rechner eingeben in cmd dann kommt systempython
+mit virtual invironment "activate" kommt python
+
+Wir haben viruatl environment installiert und bibliotheken importiert
+
+-> es gibt zwei befehle pip (python installer) installiert zusätzlich bibliotheken
+pip freeze -> |
+
+wenn jemand meine repository klont: pip install -r
+
+pip install pipreqs
+
+bei pip freeze werden alle imports reingeschrieben
+wenn wir pipreqs eingeben schaut es nach wer es wirklich verwendet im code und benutzt nur die erforderlichen (eigentlich eigenen librarys) 
+geht ordnermäßig vor
+
+ist an unsere hardware gekoppelt, sobald wir an unserem neuen rechner sind müssen wir es erneut aufbauen
 
 
 ------------------------------------------------------------ neue Stunde

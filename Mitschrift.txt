@@ -240,3 +240,29 @@ mro
 
 
 ------------------------------------------------------------ neue Stunde
+
+Seiteneffekte ist wenn man von außen darauf zugreifen kann
+Liste verändern, refferenz zeigt drauf und dadurch verändert man orginal und das verweißte dann das wird geändert - Seiteneffekte
+Konstruktor heißt in Python __init__
+Mehrfachvererbung ist in p möglich, in java nicht
+Modifikatoren in python wie static gibt es nicht wirklich
+es gibt instanz und klassen variablen
+membervariablen in java und python, wenn wir in klasse außerhalb definieren wird es zu einer membervariable mit einer instanz, erst wenn wir
+static dazuschreiben, dann wird es statisch
+wenn eine klasse von ner anderen klasse erbt dann kann man in der erbenden klasse super schreiben, damit sie von mutterklasse erbt
+was ist super? - eine Refferenz
+Lambda ist speicherschonend da kürzer
+Map sind wie for-schleifen und können iterable funktionen ausfürhren
+iterable gehen jede stelle durch und ein objekt ist iterable wenn es zb eine liste ist, oder __iter__ und __next__ müssen implementiert werden dann ist es iterable (iter-anfang, next-nächstes)
+In Java ist es keine echte Mehrfachvererbung
+I muss die eindutigkeit vergeben, wenn man mehrfach vererbt dann muss man aufpassen wenn man eine struktur mit den selbenmethodennamen nimmt - achtung überlagerung (overload)
+bei java muss ich super.super.super eingeben was ich in python nicht muss
+In der init methode kann ich schauen wie viele argumente ich habe und nach der anz. der Argumente gehen
+Wir könnten noch eine separate methode machen oder vererbung
+Wir haben mehrere Konstruktoren
+
+
+
+
+
+------------------------------------------------------------ neue Stunde

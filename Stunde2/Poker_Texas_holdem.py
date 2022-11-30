@@ -139,7 +139,11 @@ def ermitteln(hand, tisch):
 
 def main_festlegen(hand, tisch):#gibt aus, was die beste Kombination aus deiner Hand und dem was auf dem Tisch liegt wäre
     print(f"Deine beste Kombination wäre: {ermitteln(hand, tisch)}")
+    
 
-if __name__ == "__main__":
+def main():
     main_festlegen(deine_hand, tisch)
+    
+if __name__ == "__main__":
+    main()
         

@@ -29,7 +29,6 @@ class Mitarbeiter(Person):
     
 
 class Abteilungsleiter(Mitarbeiter):
-    stelle = "Boss"
     def __init__(self, name, gender):
         super().__init__(name, gender)
     
@@ -68,18 +67,18 @@ class Firma:
         return abt
     
     def anz_F_M(self):
-        dict_quote = {"Mann" : 0, "Frau" : 0, "Anz_Frau": 0}
+        dict_anz = {"Mann" : 0, "Frau" : 0, "Anz_Frau": 0}
         all_mit = []
         for x in self.abteilungen:
             all_mit = all_mit + x.mitarbeiter
             all_mit.append(x.abteilungsleiter)
         for i in all_mit:
             if(i.gender == Gender.Female):
-                dict_quote["Frau"] +=1
+                dict_anz["Frau"] +=1
             else:
-                dict_quote["Mann"] += 1
-        dict_quote["Anz_Frau"] = dict_quote["Frau"]/self.get_anz_MAs() 
-        return dict_quote
+                dict_anz["Mann"] += 1
+        dict_anz["Anz_Frau"] = dict_anz["Frau"]/self.get_anz_MAs() 
+        return dict_anz
         
 
     def get_MAStaerke(self):
@@ -88,19 +87,6 @@ class Firma:
         for ab in self.abteilungen:
             if(ab.get_anz_MAs() > biggest):
                 biggest = ab.get_anz_MAs()
-                name = ab.name
-        return name + "_" + str(biggest)
-
-    def print(self):
-        return self.name + "--" + str(self.kennung) + "--" + self.abteilungen
-        
-
-    def get_MAStaerke(self):
-        biggest = 0
-        name = ""
-        for ab in self.abteilungen:
-            if(ab.get_anz_mas() > biggest):
-                biggest = ab.get_anz_mas()
                 name = ab.name
         return name + "_" + str(biggest)
 
@@ -136,7 +122,7 @@ if __name__ == "__main__":
     for x in firma.abteilungen:
         print("Abteilungen", x.print())
     
-    print("Größte Abteilung", firma.get_abtl())
+    #print("Größte Abteilung", firma.get_abtl())
 
     dict_anzh = firma.anz_F_M()
     print(dict_anzh)

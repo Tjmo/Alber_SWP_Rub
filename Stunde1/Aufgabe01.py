@@ -3,7 +3,7 @@ def ziehzahlen(start,end, zieh):
     zahlen=[]
     for x in range(start,end+1):
         zahlen.append(x)
-    zahlenGezogen = []
+    #zahlenGezogen = []
     gezogen = 0
 
     for x in range(zieh):
@@ -12,7 +12,7 @@ def ziehzahlen(start,end, zieh):
 
         zahlen[stelle],zahlen[len(
             zahlen)-1-x] = zahlen[len(zahlen)-1-x],zahlen[stelle]
-    print(zahlen)
+    #print(zahlen)
     return zahlen[-zieh:] #bzw [-7:-1]
 
 print(ziehzahlen(0,45,6))

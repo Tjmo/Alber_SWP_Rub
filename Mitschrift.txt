@@ -295,3 +295,38 @@ ist an unsere hardware gekoppelt, sobald wir an unserem neuen rechner sind müss
 wir haben projekt, dann hab ich gitinit, dann gitignore python c*jpg oder so kein plan, pipreqs installieren (oder freeze)
 
 ------------------------------------------------------------ neue Stunde
+Namespaces geben Scope an, in dem sie definiert sind (Sichtbarkeit)
+-> Sammlung von Variablen
+Es gibt global, enclosing, Built-in, und local namespace
+
+Enclosing ist wenn in python in der methode eine andere Methode definiert wird (nested Methods)
+local -> enclosing -> global -> built-in
+enclosed ist die zweite def in einer def (enclosing)
+
+https://realpython.com/python-namespaces-scope/
+
+Wenn wir eine variable nicht finden bekommen wir eine name-error exception
+
+Alles was ich global definiere ist überall Sichtbarkeit
+
+built in, ist des was python schon direkt vordefiniert hat
+
+Error: kann man nicht handlen
+Exception: kann man handlen
+
+python verwaltet refferenzen als Dictionaries
+->
+global()
+{add:adfa,aadfa:hs,nrt:rmrr,...}
+
+global vor variabel schreiben für Sichtbarkeit
+x,y,z = 1,2,3
+
+nonlocal isch um global zu umgehen
+
+-Best Practices durchlesen zuhause-
+
+
+
+------------------------------------------------------------ neue Stunde
+

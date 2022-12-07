@@ -330,3 +330,30 @@ nonlocal isch um global zu umgehen
 
 ------------------------------------------------------------ neue Stunde
 
+Wieso brauche ich Bibliotheken?
+Wiederverwendbarkeit,
+Simplicity,
+Wartbarkeit (damit ich wenn ich an einer stelle was mache, dass es benötigte auch geändert wird),
+Scoping (Gültigkeitsbereich wenn ich etwas importiere, dann entsteht ein 2. global bereich)
+
+Ein Modul kann selber geschrieben werden (ist nur Python Code), wir können in C module schreiben
+Es gibt Module die per se schon module sind aber von haus aus in interpreten eingebettet sind
+
+
+mod.py - man kann variabeln, methoden, klassen importieren
+
+Wie macht man module: in aktuellen ordner reinlegen oder in aktuellen pfad legen ooooder schmutzig: aktuellen pfad manipulieren (zu dem pfad directory oder so hinzufügen -> man verändert damit struktur -> wird unkenntlich)
+
+mod. ist aufrufverfahren
+
+
+https://realpython.com/python-modules-packages/
+
+import * importiert alles
+
+dir() zeigt was ich local definiert habe
+
+ein modul kann man nur einmal laden
+
+------------------------------------------------------------ neue Stunde
+

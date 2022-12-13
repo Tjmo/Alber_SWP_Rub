@@ -6,12 +6,12 @@
 #         case _:
 #             return "Something's wrong with the internet"
 
-    
-
-
-
 import random
 from enum import IntEnum
+
+spieler_siege = 0
+ai_siege = 0
+spiel_wahl = {"Stein": 0, "Papier": 0, "Schere": 0, "Spock": 0, "Echse": 0}
 
 class Action(IntEnum):
     Stein = 0
@@ -32,36 +32,60 @@ victories = {
 def get_user_selection():
     choices = [f"{action.name}[{action.value}]" for action in Action]
     choices_str = ", ".join(choices)
-    selection = int(input(f"Enter a choice ({choices_str} (0-4)): "))
+    selection = int(input(f"Wähle zwischen 0 und 4 ({choices_str}): "))
     action = Action(selection)
     return action
 
 def get_computer_selection():
     selection = random.randint(0, len(Action) - 1)
     action = Action(selection)
+    print(f"Computer Wahl: ",action)
     return action
 
-def determine_winner(user_action, computer_action):
-    defeats = victories[user_action]
-    if user_action == computer_action:
-        print(f"Both players selected {user_action.name}. It's a tie!")
+def determine_winner(spieler_zug, computer_action):
+    global ai_siege, spieler_siege
+    defeats = victories[spieler_zug]
+    if spieler_zug == computer_action:
+        print(f"Beide Spieler haben {spieler_zug.name} gewählt. Unentschieden!")
     elif computer_action in defeats:
-        print(f"{user_action.name} beats {computer_action.name}! You win!")
+        print(f"{spieler_zug.name} schlägt {computer_action.name}! Du Gewinnst!")
+        spieler_siege = spieler_siege + 1
     else:
-        print(f"{computer_action.name} beats {user_action.name}! You lose.")
+        print(f"{computer_action.name} schlägt {spieler_zug.name}! Du verlierst.")
+        ai_siege = ai_siege + 1
 
-while True:
-    try:
-        user_action = get_user_selection()
-    except ValueError as e:
-        range_str = f"[0, {len(Action) - 1}]"
-        print(f"Invalid selection. Enter a value in range {range_str}")
-        continue
+def save_data_to_file():
+    data = "Spieler gewinnt: " + str(spieler_siege) + "\nComputer gewinnt: " + str(ai_siege) + "\n" + str(spiel_wahl)
+    with open("D:/Dokumente/Schule/2022_23/SWP_Rub/Stunde3/stat.txt", 'w') as stat:
+        stat.write(data)
+        stat.close()
 
-    computer_action = get_computer_selection()
-    determine_winner(user_action, computer_action)
+if __name__ == "__main__":
+    while True:
+        try:
+            spieler_zug = get_user_selection()
+            print("Spieler Wahl:", spieler_zug)
+            
+            if spieler_zug == Action.Stein:
+                spiel_wahl["Stein"] = spiel_wahl["Stein"] + 1
+            elif spieler_zug == Action.Papier:
+                spiel_wahl["Papier"] = spiel_wahl["Papier"] + 1
+            elif spieler_zug == Action.Schere:
+                spiel_wahl["Schere"] = spiel_wahl["Schere"] + 1
+            elif spieler_zug == Action.Spock:
+                spiel_wahl["Spock"] = spiel_wahl["Spock"] + 1
+            elif spieler_zug == Action.Echse:
+                spiel_wahl["Echse"] = spiel_wahl["Echse"] + 1
 
-    play_again = input("Play again? (y/n): ")
-    if play_again.lower() != "y":
-        break
+        except ValueError as e:
+            range_str = f"[0, {len(Action) - 1}]"
+            print(f"Falsche Eingabe, bitte etwas von {range_str} eingeben!")
+            continue
+        computer_action = get_computer_selection()
+        determine_winner(spieler_zug, computer_action)
 
+        play_again = input("Nochmal? (j/n): ")
+        if play_again.lower() != "j":
+            break
+
+        save_data_to_file()

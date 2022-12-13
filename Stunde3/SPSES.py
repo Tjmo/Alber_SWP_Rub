@@ -9,6 +9,7 @@
 import random
 from enum import IntEnum
 
+
 spieler_siege = 0
 ai_siege = 0
 spiel_wahl = {"Stein": 0, "Papier": 0, "Schere": 0, "Spock": 0, "Echse": 0}
@@ -29,25 +30,25 @@ victories = {
 }
 
 
-def get_user_selection():
-    choices = [f"{action.name}[{action.value}]" for action in Action]
-    choices_str = ", ".join(choices)
-    selection = int(input(f"Wähle zwischen 0 und 4 ({choices_str}): "))
-    action = Action(selection)
+def get_user_auswahl():
+    wahlmöglichkeiten = [f"{action.name}[{action.value}]" for action in Action]
+    wahlmöglichkeiten_str = ", ".join(wahlmöglichkeiten)
+    auswahl = int(input(f"Wähle zwischen 0 und 4 ({wahlmöglichkeiten_str}): "))
+    action = Action(auswahl)
     return action
 
-def get_computer_selection():
-    selection = random.randint(0, len(Action) - 1)
-    action = Action(selection)
+def get_computer_auswahl():
+    auswahl = random.randint(0, len(Action) - 1)
+    action = Action(auswahl)
     print(f"Computer Wahl: ",action)
     return action
 
 def determine_winner(spieler_zug, computer_action):
     global ai_siege, spieler_siege
-    defeats = victories[spieler_zug]
+    verlier = victories[spieler_zug]
     if spieler_zug == computer_action:
         print(f"Beide Spieler haben {spieler_zug.name} gewählt. Unentschieden!")
-    elif computer_action in defeats:
+    elif computer_action in verlier:
         print(f"{spieler_zug.name} schlägt {computer_action.name}! Du Gewinnst!")
         spieler_siege = spieler_siege + 1
     else:
@@ -63,7 +64,7 @@ def save_data_to_file():
 if __name__ == "__main__":
     while True:
         try:
-            spieler_zug = get_user_selection()
+            spieler_zug = get_user_auswahl()
             print("Spieler Wahl:", spieler_zug)
             
             if spieler_zug == Action.Stein:
@@ -81,7 +82,7 @@ if __name__ == "__main__":
             range_str = f"[0, {len(Action) - 1}]"
             print(f"Falsche Eingabe, bitte etwas von {range_str} eingeben!")
             continue
-        computer_action = get_computer_selection()
+        computer_action = get_computer_auswahl()
         determine_winner(spieler_zug, computer_action)
 
         play_again = input("Nochmal? (j/n): ")

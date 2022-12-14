@@ -46,22 +46,6 @@ def get_computer_auswahl():
     return action
 
 
-def smart_computer_auswahl():
-    max_value = max(spiel_wahl.values())
-
-    max_key = max(spiel_wahl, key=spiel_wahl.get)
-
-    index = list(spiel_wahl).index(max_key)
-    most_frequent = Action(index)
-    print("most frequent: ", most_frequent)
-
-    defeats = verloren[most_frequent]
-    comp_sel = defeats[0]
-    print(f"Computer wählte: ", comp_sel)
-    return comp_sel
-
-
-
 def get_user_auswahl():
     walhmöglichkeiten = [f"{action.name}[{action.value}]" for action in Action]
     walhmöglichkeiten_str = ", ".join(walhmöglichkeiten)
@@ -71,16 +55,16 @@ def get_user_auswahl():
     return action
 
 
-def determine_winner(user_action, computer_action):
+def determine_winner(spieler_zug, computer_action):
     global ai_siege, spieler_siege
-    defeats = siege[user_action]
-    if user_action == computer_action:
-        print(f"Beide Spieler haben {user_action.name} gewählt. Unentschieden!")
+    defeats = siege[spieler_zug]
+    if spieler_zug == computer_action:
+        print(f"Beide Spieler haben {spieler_zug.name} gewählt. Unentschieden!")
     elif computer_action in defeats:
-        print(f"{user_action.name} schlägt {computer_action.name}! Du gewinnst!")
+        print(f"{spieler_zug.name} schlägt {computer_action.name}! Du gewinnst!")
         spieler_siege = spieler_siege + 1
     else:
-        print(f"{computer_action.name} schlägt {user_action.name}! Du verlierst.")
+        print(f"{computer_action.name} schlägt {spieler_zug.name}! Du verlierst.")
         ai_siege = ai_siege + 1
 
 
@@ -113,17 +97,17 @@ if __name__ == "__main__":
     else:
         while True:
             try:
-                user_action = get_user_auswahl()
-                print("Spieler wählt:", user_action)
-                if user_action == Action.Stein:
+                spieler_zug = get_user_auswahl()
+                print("Spieler wählt:", spieler_zug)
+                if spieler_zug == Action.Stein:
                     spiel_wahl["Stein"] = spiel_wahl["Stein"] + 1
-                elif user_action == Action.Papier:
+                elif spieler_zug == Action.Papier:
                     spiel_wahl["Papier"] = spiel_wahl["Papier"] + 1
-                elif user_action == Action.Schere:
+                elif spieler_zug == Action.Schere:
                     spiel_wahl["Schere"] = spiel_wahl["Schere"] + 1
-                elif user_action == Action.Spock:
+                elif spieler_zug == Action.Spock:
                     spiel_wahl["Spock"] = spiel_wahl["Spock"] + 1
-                elif user_action == Action.Echse:
+                elif spieler_zug == Action.Echse:
                     spiel_wahl["Echse"] = spiel_wahl["Echse"] + 1
 
 
@@ -131,10 +115,10 @@ if __name__ == "__main__":
                 range_str = f"[0, {len(Action) - 1}]"
                 print(f"Invalid auswahl. Enter a value in range {range_str}")
                 continue
-
-            computer_action = smart_computer_auswahl()
-            determine_winner(user_action, computer_action)
-
+            
+            computer_action = get_computer_auswahl()
+            determine_winner(spieler_zug, computer_action)
+            
             play_again = input("Nochmal? (j/n): ")
             if play_again.lower() != "j":
                 break

@@ -1,3 +1,0 @@
-Spieler gewinnt: 1
-Computer gewinnt: 2
-{'Stein': 0, 'Papier': 1, 'Schere': 3, 'Spock': 2, 'Echse': 1}

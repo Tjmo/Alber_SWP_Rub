@@ -357,3 +357,6 @@ ein modul kann man nur einmal laden
 
 ------------------------------------------------------------ neue Stunde
 
+n*logn sortiert, gibt sonst noch Bubblesort
+
+Instanzvariablen (Alles was mit Self anfängt (100 Firmen = 100 Instanzen)) und Klassenvariablen ()

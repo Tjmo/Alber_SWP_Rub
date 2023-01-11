@@ -1,0 +1,41 @@
+from flask import Flask, jsonify, request
+app = Flask(__name__)
+
+games = {
+    'rock': {'scissors': 'crushes', 'lizard': 'crushes'},
+    'paper': {'rock': 'covers', 'spock': 'disproves'},
+    'scissors': {'paper': 'cuts', 'lizard': 'decapitates'},
+    'lizard': {'spock': 'poisons', 'paper': 'eats'},
+    'spock': {'scissors': 'smashes', 'rock': 'vaporizes'},
+}
+
+player_wins = {
+    'player1': 0,
+    'player2': 0,
+}
+
+@app.route('/play', methods=['POST'])
+def play():
+    data = request.get_json()
+    player1_choice = data['player1']
+    player2_choice = data['player2']
+
+    if player1_choice not in games:
+        return jsonify({'error': 'Invalid choice for player 1'}), 400
+    if player2_choice not in games:
+        return jsonify({'error': 'Invalid choice for player 2'}), 400
+
+    result = None
+    if player1_choice == player2_choice:
+        result = "tie"
+    elif player2_choice in games[player1_choice]:
+        result = f"player1 wins: {player1_choice} {games[player1_choice][player2_choice]} {player2_choice}"
+        player_wins['player1'] += 1
+    else:
+        result = f"player2 wins: {player2_choice} {games[player2_choice][player1_choice]} {player1_choice}"
+        player_wins['player2'] += 1
+
+    return jsonify({'result': result, 'player_wins': player_wins}), 200
+
+if __name__ == '__main__':
+    app.run()

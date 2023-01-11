@@ -77,7 +77,7 @@ class Firma:
                 dict_anz["Frau"] +=1
             else:
                 dict_anz["Mann"] += 1
-        dict_anz["Anz_Frau"] = dict_anz["Frau"]/self.get_anz_MAs() 
+        dict_anz["Anz_Frau (%)"] = round((dict_anz["Frau"]/self.get_anz_MAs())*100)
         return dict_anz
         
 

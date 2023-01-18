@@ -1,0 +1,52 @@
+import random
+
+class Node:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+        
+    def append(self, data):
+        if not isinstance(data, int):
+            raise ValueError("Data must be an integer.")
+        new_node = Node(data)
+        if self.head is None:
+            self.head = new_node
+            return
+        last_node = self.head
+        while last_node.next:
+            last_node = last_node.next
+        last_node.next = new_node
+        
+    def print_list(self):
+        curr_node = self.head
+        while curr_node:
+            print(curr_node.data)
+            curr_node = curr_node.next
+
+    def length(self):
+        curr_node = self.head
+        count = 0
+        while curr_node:
+            count += 1
+            curr_node = curr_node.next
+        return count
+    
+    def print_all_elements(self):
+        curr_node = self.head
+        while curr_node:
+            print(curr_node.data)
+            curr_node = curr_node.next
+
+def main():
+    llist = LinkedList()
+    for _ in range(10):
+        llist.append(random.randint(1,100))
+    print("Length of linked list:",llist.length())
+    llist.print_all_elements()
+
+if __name__ == "__main__":
+    main()

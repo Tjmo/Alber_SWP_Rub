@@ -457,4 +457,22 @@ https://www.data-science-architect.de/args-kwargs/
 
 ------------------------------------------------------------ neue Stunde
 
+Decorator wid erst dann aufgerufen wenn 
 
+Wenn wir eine Methode haben die zweimal aufgerufen werden soll
+
+Do twice decorator
+https://realpython.com/primer-on-python-decorators/
+
+functools dekoriert unsere wrapper (@functools.wraps(func)) speicher eine funktion ab und übergibt wieder
+zurück wenn wir mit unserem wrapper do twice methode und verlieren somit den namen der im beispiel übergeben
+wird
+
+import functools
+def do_twice(func):
+    @functools.wraps(func)
+    def wrapper_do_twice(*args, **kwargs):
+
+proxypattern nachlesen sonst greini froga
+
+timing functions

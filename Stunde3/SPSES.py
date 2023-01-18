@@ -1,10 +1,4 @@
-# Match funktion ist leider erst ab Version 3.10 verfügbar
-# def http_error(status):
-#     match status:
-#         case 400:
-#             return "Bad request"
-#         case _:
-#             return "Something's wrong with the internet"
+
 
 import random
 from enum import IntEnum

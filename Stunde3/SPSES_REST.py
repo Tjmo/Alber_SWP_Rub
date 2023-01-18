@@ -30,7 +30,6 @@ class SimpleNameScore(Resource):
         score[name] = request.form['score']
         return {"Message": "%s gepatched" % name}
 
-
 api.add_resource(SimpleNameScore, '/score/<string:name>')
 
 if __name__ == '__main__':

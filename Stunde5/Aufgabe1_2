@@ -1,0 +1,48 @@
+from random import randint
+
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
+        self.tail = None
+        self.length = 0
+    
+    class Node:
+        def __init__(self, data):
+            self.data = data
+            self.next = None
+    
+    def append(self, data):
+        new_node = self.Node(data)
+        if self.head is None:
+            self.head = new_node
+            self.tail = new_node
+        else:
+            self.tail.next = new_node
+            self.tail = new_node
+        self.length += 1
+    
+    def get_length(self):
+        return self.length
+    
+    def print_list(self):
+        current_node = self.head
+        while current_node:
+            print(current_node.data)
+            current_node = current_node.next
+
+def main():
+    my_list = LinkedList()
+    for i in range(10):
+        my_list.append(randint(1, 100))
+    print("Length of list: ", my_list.get_length())
+    my_list.print_list()
+
+
+if __name__ == "__main__":
+    main()
+
+'''In diesem Beispiel wird eine einfach verkettete Liste als Objekt instanziiert.
+Die Klasse LinkedList hat Methoden zum Anhängen von Ganzzahlen an die Liste,
+zur Ausgabe der Länge der Liste und zur Ausgabe aller Elemente.
+Im main wird eine Liste erstellt und mit zufälligen Ganzzahlen befüllt.'''

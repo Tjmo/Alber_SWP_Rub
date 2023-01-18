@@ -1,0 +1,3 @@
+Spieler Timo gewinnt: 0
+Computer gewinnt: 1
+{'Stein': 0, 'Papier': 0, 'Schere': 0, 'Spock': 1, 'Echse': 0}

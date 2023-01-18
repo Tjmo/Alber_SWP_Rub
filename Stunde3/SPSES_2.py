@@ -115,6 +115,7 @@ if __name__ == "__main__":
                 range_str = f"[0, {len(Action) - 1}]"
                 print(f"Invalid auswahl. Enter a value in range {range_str}")
                 continue
+                continue
             
             computer_action = get_computer_auswahl()
             determine_winner(spieler_zug, computer_action)

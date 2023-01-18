@@ -360,3 +360,101 @@ ein modul kann man nur einmal laden
 n*logn sortiert, gibt sonst noch Bubblesort
 
 Instanzvariablen (Alles was mit Self anfängt (100 Firmen = 100 Instanzen)) und Klassenvariablen ()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--------------------------------------------neues Jahr----------------------------------------
+
+In Python kann man nicht nur Objekte sondern auch Funktionen übergeben, also Methoden andere Methoden übergebe.
+
+3 Normalformen
+Atomar, alle nicht Primärschlüssel Atribute müssen immer von einem (Schlüssel) Atribut abhängig sein, darf nicht transient erfolgen (abhängigkeit darf nicht über einen nichtschlüssel fungieren)...deutsch?
+Die drei Normalformen des Programmierens sind die erste Normalform (1NF), die zweite Normalform (2NF) und die dritte Normalform (3NF).
+
+1NF bezieht sich auf die Struktur der Tabellen in einer Datenbank, und sie besagt, dass jede Zelle in einer Tabelle genau einen Wert enthalten sollte.
+
+2NF besagt, dass jede Nicht-Primärschlüsselfehlvariable in einer Tabelle vollständig von der Primärschlüsselfehlvariable abhängig ist.
+
+3NF besagt, dass es keine transitive Abhängigkeiten in einer Tabelle gibt,d.h. dass jede Nicht-Primärschlüsselfehlvariable in einer Tabelle nicht direkt oder indirekt von einer anderen Nicht-Primärschlüsselfehlvariable abhängig ist.
+
+0.3333333 weil Gleitkommazahl (float) ja in Binär gespeichert wird und 1/3 schwer darzustellen ist und speicher fressen würde
+
+
+Dateipfad verbessern, verkürzen, auf anderen Systemen zum Laufen bringe; generell von Home ausgehen
+spieler zug in global
+
+
+
+In Python können Funktionen Argumente auf zwei Arten entgegennehmen:
+durch Positionsargumente und Schlüsselwortargumente (auch als "kwargs" bezeichnet).
+
+Positionsargumente werden anhand ihrer Position übergeben.
+Diese Argumente müssen in der gleichen Reihenfolge übergeben werden,
+wie sie in der Funktionsdefinition angegeben sind. Hier ist ein Beispiel:
+
+def print_info(name, age):
+    print(f"Name: {name}, Alter: {age}")
+
+print_info("Alice", 25)  # Name: Alice, Alter: 25
+
+In diesem Beispiel wird die Funktion print_info mit zwei Positionsargumenten aufgerufen:
+"Alice" und 25. Da die Argumente in der gleichen Reihenfolge übergeben werden,
+wie sie in der Funktionsdefinition angegeben sind, werden sie der Variablen name und age zugewiesen.
+
+Schlüsselwortargumente (kwargs) werden anhand ihres Schlüssels übergeben.
+Diese Argumente können in einer beliebigen Reihenfolge übergeben werden und müssen mit dem Schlüssel angegeben werden.
+Hier ist ein Beispiel:
+
+def print_info(name, age):
+    print(f"Name: {name}, Alter: {age}")
+
+print_info(age=25, name="Alice")  # Name: Alice, Alter: 25
+
+In diesem Beispiel wird die Funktion print_info immer noch mit zwei Argumenten aufgerufen,
+aber diesmal werden sie als Schlüsselwortargumente übergeben.
+Da die Argumente mit ihrem Schlüssel angegeben werden,
+können sie in einer beliebigen Reihenfolge übergeben werden und werden trotzdem der Variablen name und age zugewiesen.
+
+Es gibt auch eine Möglichkeit, eine Funktion so zu schreiben,
+dass sie sowohl Positions- als auch Schlüsselwortargumente entgegennehmen kann.
+Dies kann durch die Verwendung von *args und **kwargs in der Funktionsdefinition erreicht werden.
+
+def print_info(*args, **kwargs):
+    print(f"Positional args: {args}")
+    print(f"Keyword args: {kwargs}")
+
+print_info("Alice", 25, "Bob", 30, name="Charlie", age=35)
+
+In diesem Beispiel entgegnet die print_info Funktion sowohl Positions als auch Schlüsselwortargumente.
+Die Positionsargumente werden in einem Tuple args gesammelt und
+https://www.data-science-architect.de/args-kwargs/
+
+
+
+------------------------------------------------------------ neue Stunde
+
+

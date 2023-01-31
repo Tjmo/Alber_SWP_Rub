@@ -1,6 +1,6 @@
 import random
 
-class Node:
+class samsin:
     def __init__(self, data):
         self.data = data
         self.next = None
@@ -11,39 +11,39 @@ class LinkedList:
         
     def append(self, data):
         if not isinstance(data, int):
-            raise ValueError("Data must be an integer.")
-        new_node = Node(data)
+            raise ValueError("Muss int sein")
+        new_samsin = samsin(data)
         if self.head is None:
-            self.head = new_node
+            self.head = new_samsin
             return
-        last_node = self.head
-        while last_node.next:
-            last_node = last_node.next
-        last_node.next = new_node
+        last_samsin = self.head
+        while last_samsin.next:
+            last_samsin = last_samsin.next
+        last_samsin.next = new_samsin
         
     def print_list(self):
-        curr_node = self.head
-        while curr_node:
-            print(curr_node.data)
-            curr_node = curr_node.next
+        curr_samsin = self.head
+        while curr_samsin:
+            print(curr_samsin.data)
+            curr_samsin = curr_samsin.next
 
     def length(self):
-        curr_node = self.head
+        curr_samsin = self.head
         count = 0
-        while curr_node:
+        while curr_samsin:
             count += 1
-            curr_node = curr_node.next
+            curr_samsin = curr_samsin.next
         return count
     
     def print_all_elements(self):
-        curr_node = self.head
-        while curr_node:
-            print(curr_node.data)
-            curr_node = curr_node.next
+        curr_samsin = self.head
+        while curr_samsin:
+            print(curr_samsin.data)
+            curr_samsin = curr_samsin.next
 
 def main():
     llist = LinkedList()
-    for _ in range(10):
+    for o in range(10):
         llist.append(random.randint(1,100))
     print("Length of linked list:",llist.length())
     llist.print_all_elements()

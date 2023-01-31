@@ -481,3 +481,8 @@ functools kopiert dunder und fügt es danach hinzu
 schreibt diese names nochmals im code (im stack) hinzu nach der kopie
 
 decorators und functools ganz sicher im test!
+
+
+------------------------------------------------------------ neue Stunde
+
+

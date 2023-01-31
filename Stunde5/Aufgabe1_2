@@ -1,48 +1,55 @@
-from random import randint
+import random
 
+class samsin:
+    def __init__(self, data):
+        self.data = data
+        self.next = None
 
 class LinkedList:
     def __init__(self):
         self.head = None
-        self.tail = None
-        self.length = 0
-    
-    class Node:
-        def __init__(self, data):
-            self.data = data
-            self.next = None
-    
-    def append(self, data):
-        new_node = self.Node(data)
-        if self.head is None:
-            self.head = new_node
-            self.tail = new_node
-        else:
-            self.tail.next = new_node
-            self.tail = new_node
-        self.length += 1
-    
-    def get_length(self):
-        return self.length
-    
+
+    def append_end(self, *args):
+        for data in args:
+            new_samsin = samsin(data)
+            if self.head is None:
+                self.head = new_samsin
+                continue
+            last_samsin = self.head
+            while last_samsin.next:
+                last_samsin = last_samsin.next
+            last_samsin.next = new_samsin
+        
     def print_list(self):
-        current_node = self.head
-        while current_node:
-            print(current_node.data)
-            current_node = current_node.next
+        curr_samsin = self.head
+        while curr_samsin:
+            print(curr_samsin.data)
+            curr_samsin = curr_samsin.next
+
+    def length(self):
+        curr_samsin = self.head
+        count = 0
+        while curr_samsin:
+            count += 1
+            curr_samsin = curr_samsin.next
+        return count
+    
+    def print_all_elements(self):
+        curr_samsin = self.head
+        while curr_samsin:
+            print(curr_samsin.data)
+            curr_samsin = curr_samsin.next
+
+
+#llist = LinkedList()
+#llist.append_end(1, 2, 3, 4, 5)
 
 def main():
-    my_list = LinkedList()
-    for i in range(10):
-        my_list.append(randint(1, 100))
-    print("Length of list: ", my_list.get_length())
-    my_list.print_list()
-
+    llist = LinkedList()
+    for o in range(10):
+        llist.append_end(random.randint(1,100))
+    print("Length of linked list:",llist.length())
+    llist.print_all_elements()
 
 if __name__ == "__main__":
     main()
-
-'''In diesem Beispiel wird eine einfach verkettete Liste als Objekt instanziiert.
-Die Klasse LinkedList hat Methoden zum Anhängen von Ganzzahlen an die Liste,
-zur Ausgabe der Länge der Liste und zur Ausgabe aller Elemente.
-Im main wird eine Liste erstellt und mit zufälligen Ganzzahlen befüllt.'''

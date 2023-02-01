@@ -57,7 +57,7 @@ def main():
     llist = LinkedList()
     for o in range(10):
         llist.append(random.randint(1,100))
-    print("Length of linked list:",llist.length())
+    print("Länge der Liste:",llist.length())
     llist.print_all_elements()
 
 #sorgt dafür, dass Programm nur ausgeführt wird, wenn Programm direkt ausgeführt wird (nicht importiert) und nicht wenn es als modul importiert wird

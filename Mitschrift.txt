@@ -486,3 +486,57 @@ decorators und functools ganz sicher im test!
 ------------------------------------------------------------ neue Stunde
 
 
+Was kommt test
+
+tutorials teacher python test
+
+namespaces theorie;
+args, kwargs;
+
+
+(bubble usw) sort nit genau so aber es gibt 2 gruppen von sortieralgorithmen
+Aufwandsklasse: n^2 (der schnellste)
+(in search in sort (insertieren -> 5 karten in hand, nehme eine karte suche position (zwischen 4 und 8)), er kann wenn zahlen schon in reihenfolge sind hat er bessere Aufwandsklasse (n im besten fall) (welche Aufwandsklasse ein Programm hat sieht man nur am Code) am effektivsten unter 43)
+(Selectionsort suche kleinstes element aus zb 10, schiebs vor und hab dann nur noch 8, dann 7,...)
+(Bubblesort)
+
+und Aufwandsklasse: n*logn
+Äußere schleife ist rekursion, innere schleife bleibt normal
+quicksort macht datenstruktur mit pfeilen, pfeile treffen sich dann in der mitte und teilt das array in 2 teile auf (in teilbereiche rekursive varianten) (höhe eines Baumen ist logn));
+
+Es gibt Stabilität und inplace
+inplace bedeutet ob sortierverfahren oder algorithmus innerhalb seiner datenstruktur arbeitet--> hintergrund: ich habe 1 mio. speicher und datenstruktur ist 1 mio. groß -> tendenziell immer besser inplace algorithmus zu verwenden
+
+!!!algorith. ist dann inplace wenn es keinen von n abhängigen zusatzspeicher benötigt UND dieser zusätzliche speicher muss dann konstant sein!!!
+quicksort arbeitet innerhalb datenstruktur braucht aber zusätzlich eigenen speicher auf Stack 
+
+dann gibts stabilität, zb wir haben eine datenstruktur und in der datenstruktur haben wir gleiche elemente (a paar 7ner) -> 7a,7b,7c -> dann sortieren aber merken 7ner sind durcheinander geraten (also nicht stabil)
+
+Hauptkriterium ist aufwandsklasse, dann inplace/stabilität
+
+
+Pythonaufgabe zur Matura, Jenewein schafft in unter 1h
+
+
+decorators; random?;
+
+
+
+
+
+
+einfach verkettete liste wir haben headzeiger der zeigt auf 0 und dann gibt es zeiger der auf den nextes objekt, dann next auf None
+wollen wir 2. objekt hinzufügen
+bei ner einfachen muss man alle elemente durchgehen um hinten was hinzuzufügen
+doppelt verkettet liste kann man von hinten und von vorne die elemente einarbeiten
+
+
+wenn etwas konstante aufwandsklasse hat dann Ovon1 (nicht 0)
+
+
+
+in nem objekt sind gewisse methoden bereits implementiert man kann mit super irgendwas
+
+repr macht ein objekt mit dem man es sofort anlegen kann
+
+python legt typen dynamisch fest

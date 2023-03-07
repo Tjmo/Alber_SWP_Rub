@@ -28,12 +28,6 @@ class LinkedList:
         last_samsin.next = new_samsin
         
 
-    #druckt alle Datenelemente aus
-    def print_list(self):
-        curr_samsin = self.head
-        while curr_samsin:
-            print(curr_samsin.data)
-            curr_samsin = curr_samsin.next
 
     #berechnet Länge durch durchlaufen und durch Zähler(count) erhöhen
     def length(self):

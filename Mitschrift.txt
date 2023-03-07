@@ -540,3 +540,48 @@ in nem objekt sind gewisse methoden bereits implementiert man kann mit super irg
 repr macht ein objekt mit dem man es sofort anlegen kann
 
 python legt typen dynamisch fest
+
+
+------------------------------------------------------------ neue Stunde nach test
+
+
+Factory Pattern
+
+--> Entkopplung
+Wir haben immer durch ein Interface/abstrakte klasse eine vorschrift oder Muster die sagt wie man es implementieren muss
+auf der client seite kann man mittels switch(enum oder ä.) 
+
+Bsp: Geben nr. 5 an und bekommen pizza diavolo, dann sagt pizzabäcker die heist "xyz" hat aber gleiche zutaten
+hardgecodedter code müsste ausgetauscht werden von oben bis unten
+wenn aber cleint nur erstellungscode ändern will (dann muss man des nur einfach ändern (also nur eines der Teile muss ausgetauscht werden))
+
+Eine abstracte Klasse kann Methoden definieren muss aber nicht ausprogrammiert werden ich kann in Abstrakter klasse aber auch schon ausprogrammierte sachen drinnen haben
+Eine Abstrakter Klasse ist wie normale klasse nur sie hat mind. eine Methode die nicht implementiert ist (erkennt man am abstract ...(); )
+Abstrakte Klassen können von anderen etwas erben
+
+Static methode -> jedes Objekt greift auf den gleichen speicherplatz zu
+
+Der clue an factory _> Objekterstellung von der Anwendung entkoppelt
+Nachteil: enge Kopplung eines Creators/Produktes (wenn wir neue Klasse erstellen, muss man es sofort Erweitern)
+
+if/else Verzweigung riecht schon nach Faktorypattern
+
+Selbstständig nachschauen wie Softwareshop verschieden aufgebaut ist
+https://www.philipphauer.de/study/se/design-pattern/factory-method.php
+
+Aggregation 
+und Komposition
+Bsp: Auto hat 4 Räder (räder können ohne auto bestehen (Aggregation))
+Haus hat 4 räume (raum kann nicht ohne haus bestehen (Komposition))
+
+Python hat kein Abstract
+
+Der Benutzer sieht ja nicht was in Erweiterung passiert,
+auch nicht was in Factory passiert,
+er weiß nur da gibts eine Methode der macht einen Typen und i kriag an Typen zurück,
+also total entkoppelt, jedes mal wenn ich etwas neues dazu programmier
+
+public static void Main
+    iwas iwas iwas
+-> iwas... muss nicht definiert werden weil es ja static ist (im moment an dem main aufgerufen wird)
+

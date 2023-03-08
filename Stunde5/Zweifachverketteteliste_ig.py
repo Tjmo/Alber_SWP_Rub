@@ -16,7 +16,7 @@ class DoublyLinkedList:
         self.head = None
         self.tail = None
 
-    #fügt neues Element am ende der Liste Hinzu
+    #fügt neues Element am ende der Liste hinzu
     def append(self, data):
         #neues node für übergebene data
         new_node = Node(data)

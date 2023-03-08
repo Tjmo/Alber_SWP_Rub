@@ -585,3 +585,19 @@ public static void Main
     iwas iwas iwas
 -> iwas... muss nicht definiert werden weil es ja static ist (im moment an dem main aufgerufen wird)
 
+
+------------------------------------------------------------ neue Stunde nach test
+
+
+Observerpattern:
+auto tacho -> wollen mehrere leute wissen wie schnell wir fahren
+mehrere Sensoren sollen überwacht werden
+messwerte // status // zeitung // km/h anzeige //
+
+https://www.philipphauer.de/study/se/design-pattern/observer.php
+|--> Quellcode Verlag, FAZVerlag: // Quellcode Zeitung:
+
+Instanzen sollen nicht fix verdrahtet sein
+
+Push oder Pull?
+

@@ -5,15 +5,15 @@ abstract class Pizzeria {
     public abstract Pizza createPizza(String type);
     
     public void bakePizza(Pizza pizza) {
-        System.out.println("Baking pizza...");
+        System.out.println("Pizza backen...");
     }
     
     public void cutPizza(Pizza pizza) {
-        System.out.println("Cutting pizza...");
+        System.out.println("Pizza schneiden...");
     }
     
     public void packPizza(Pizza pizza) {
-        System.out.println("Packing pizza...");
+        System.out.println("Pizza einpacken...");
     }
 }
 
@@ -22,7 +22,7 @@ abstract class Pizza {
     protected String name;
     
     public void prepare() {
-        System.out.println("Preparing pizza: " + name);
+        System.out.println("Bereite Pizza: " + name + " vor!");
     }
 }
 

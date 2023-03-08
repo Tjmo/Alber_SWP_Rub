@@ -7,7 +7,7 @@ class Node:
         self.prev = None
         self.next = None
 
-#erstellt doppelt verkettete Liste
+#doppelt verkettete Liste
 class DoublyLinkedList:
     def __init__(self):
         #leere Liste
@@ -23,7 +23,7 @@ class DoublyLinkedList:
         #überprüft ob übergebene data integer
         if not isinstance(data, int):
             raise ValueError("Data must be an integer")
-        #wenn liste leer, setzt head und tail auf neue node
+        #wenn liste leer, setzt head und tail für neue node
         if self.head is None:
             self.head = new_node
             self.tail = new_node
@@ -74,7 +74,9 @@ class DoublyLinkedList:
             node_at_index.prev = new_node
             self.arr.insert(index, new_node)
 
+#entfernt element an angegebener Position in Liste
     def remove(self, index):
+        #in range?
         if index < 0 or index >= len(self.arr):
             raise IndexError("Index out of range")
         node_to_remove = self.get_node_at_index(index)

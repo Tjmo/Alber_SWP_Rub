@@ -28,7 +28,8 @@ class DoublyLinkedList:
             self.head = new_node
             self.tail = new_node
             self.arr.append(new_node)
-        # Wenn Liste nicht leer, setzt Node des Tails auf neue Node, setzt vorherigen Node auf den alten Tail und aktualisiert neuen Tail auf die neue Node
+        # Wenn Liste nicht leer, setzt Node des Tails auf neue Node,
+        # setzt vorherigen Node auf den alten Tail und aktualisiert neuen Tail auf die neue Node
         else:
             self.tail.next = new_node
             new_node.prev = self.tail

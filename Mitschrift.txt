@@ -607,3 +607,5 @@ Push oder Pull?
 
 rufen proxy methode auf und in dieser methode wird etwas überprüft, wenn des in unserem sinne ist, rufen
 wir in dieser instanz den echten proxy auf
+bw drucker ist surreal element und printer an sich ist proxy
+

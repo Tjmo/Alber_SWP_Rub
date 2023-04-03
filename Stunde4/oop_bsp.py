@@ -1,12 +1,3 @@
-from enum import Enum
-# Firma
-# ->Personen,mitarbeiter,gruppenleiter; in Abteilungen
-# -->beide Geschlechter
-
-# über Vererbung
-# Firmenobjekt
-# -> 
-
 class Gender(Enum):
     Male = 0
     Female = 1
@@ -95,7 +86,7 @@ class Firma:
 
 
 
-if __name__ == "__main__":
+def main():
     mitarbeiter1 = [
         Mitarbeiter("Marcel", Gender.Male),
         Mitarbeiter("Paula", Gender.Female),
@@ -126,3 +117,7 @@ if __name__ == "__main__":
 
     dict_anzh = firma.anz_F_M()
     print(dict_anzh)
+
+
+if __name__ == "__main__":
+    main()
